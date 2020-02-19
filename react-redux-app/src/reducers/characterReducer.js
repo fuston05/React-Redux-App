@@ -1,11 +1,13 @@
 import {
   GET_CHARACTERS,
-  UPDATE_CHARACTERS
+  UPDATE_CHARACTERS,
+  SET_ERROR
 } from '../actions/characterActions';
 
 const initialState= {
   characters: [],
-  isLoading: false
+  isLoading: false,
+  error: ''
 };
 
 export const characterReducer= (state= initialState, action) => {
@@ -13,6 +15,7 @@ export const characterReducer= (state= initialState, action) => {
     case GET_CHARACTERS: 
       return{
         ...state,
+        error: '',
         isLoading: true
       }
 
@@ -21,7 +24,15 @@ export const characterReducer= (state= initialState, action) => {
         return {
           ...state,
           isLoading: false,
+          error: '',
           characters: action.payload
+        }
+
+      case SET_ERROR:
+        return{
+          ...state,
+          isLoading: false,
+          error: action.payload
         }
 
     default: 

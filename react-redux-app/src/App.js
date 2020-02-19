@@ -41,7 +41,7 @@ function App(props) {
       <h1>Lord of the Rings</h1>
       <button onClick= {props.getCharacters}>Get Characters</button>
       <div className= 'cardCont'>
-        <Characters />
+        {!props.isLoading ? <Characters /> : <p>{'Loading ...'}</p>}
       </div>
       
     </div>
@@ -50,7 +50,8 @@ function App(props) {
 
 const mapStateToProps= state =>{
   return {
-    isLoading: state.isLoading
+    isLoading: state.isLoading,
+    error: state.error
   }
 }//end mapStateToProps
 
