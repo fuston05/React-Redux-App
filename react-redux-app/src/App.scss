@@ -1,0 +1,40 @@
+.App {
+  text-align: center;
+
+  .error {
+    color: red;
+  }
+
+  h1 {
+    font-size: 2rem;
+    padding: 2% 0;
+    color: orange;
+  }
+
+  button {
+    font-size: 1.2rem;
+    border-radius: 8px;
+    background-color: darkolivegreen;
+    color: #ccc;
+    padding: 1%;
+    margin: 0 0 1% 0;
+
+    &:hover {
+      opacity: 0.8;
+      cursor: pointer;
+    }
+  }
+
+  .cardCont {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    .loader {
+      font-size: 1.2rem;
+      color: green;
+    }
+  }
+}//end App
