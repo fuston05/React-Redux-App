@@ -21,7 +21,7 @@ import './index.css';
 
 const store= createStore(
   characterReducer, 
-  applyMiddleware(logger, thunk)
+  applyMiddleware(thunk)
   );
 
 ReactDOM.render(

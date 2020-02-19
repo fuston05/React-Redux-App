@@ -4,14 +4,7 @@ import {
 } from '../actions/characterActions';
 
 const initialState= {
-  characters: [
-    {
-      name: 'scott',
-      race: 'white',
-      gender: 'male',
-      wiki: 'https://scottfuston.com'
-    }
-  ],
+  characters: [],
   isLoading: false
 };
 
@@ -24,9 +17,11 @@ export const characterReducer= (state= initialState, action) => {
       }
 
       case UPDATE_CHARACTERS: 
+      console.log('characters from state: ', state.characters);
         return {
           ...state,
-          chatacters: action.payload
+          isLoading: false,
+          characters: action.payload
         }
 
     default: 

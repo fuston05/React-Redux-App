@@ -13,9 +13,14 @@ export const getCharacters= () => dispatch => {
       headers: {Authorization: 'Bearer 9MWooyeh7nsfjwAJMq4A'}
     })
     .then(res => {
-      console.log(res.data.docs); //characters array
-      dispatch({type: UPDATE_CHARACTERS, payload: res.data.docs});
+      // console.log('res: ', res.data.docs); //characters array
+      let data= [];
+      for( let i= 0; i < 10; i++){
+        data.push(res.data.docs[i]);
+        console.log('data: ', data);
+      }
+      dispatch({type: UPDATE_CHARACTERS, payload: data});
     })
-    .catch(err => {console.log(err);})
+    .catch(err => {console.log(err.response);})
 
 }//end getCharacters

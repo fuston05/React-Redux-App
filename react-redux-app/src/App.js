@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react';
-import axios from 'axios';
+import React from 'react';
 
 //redux
 import {connect} from 'react-redux';
@@ -8,10 +7,10 @@ import {connect} from 'react-redux';
 import {getCharacters} from './actions/characterActions';
 
 //components
-import CharacterCard from './components/CharacterCard/CharacterCard';
+import Characters from './components/Characters/Characters';
 
 //styles
-import './App.css';
+import './App.scss';
 
 
 // 9MWooyeh7nsfjwAJMq4A api key lord of the rings
@@ -42,7 +41,7 @@ function App(props) {
       <h1>Lord of the Rings</h1>
       <button onClick= {props.getCharacters}>Get Characters</button>
       <div className= 'cardCont'>
-      <CharacterCard />
+        <Characters />
       </div>
       
     </div>
