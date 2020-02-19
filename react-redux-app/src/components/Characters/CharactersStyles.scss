@@ -1,0 +1,23 @@
+
+.card{
+  border: 1px soid #ddd;
+  background-color: cornflowerblue;
+  margin: 2% 0;
+  padding: 1%;
+
+  a{
+    font-size: 1.4rem;
+    &:hover{
+      cursor: pointer;
+      opacity: 0.8;
+    }
+  }
+
+  h1{
+    font-size: 1.4rem;
+  }
+
+  p{
+    font-size: 1.4rem;
+  }
+}

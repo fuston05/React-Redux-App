@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {useEffect} from 'react';
+import axios from 'axios';
 
 //redux
 import {connect} from 'react-redux';
@@ -36,12 +37,24 @@ import './App.scss';
 
 function App(props) {
 
+  // useEffect(() => {
+  //   axios
+  //   .get(`https://the-one-api.herokuapp.com/v1/character/[5cd99d4bde30eff6ebccfdf3]`, 
+  //   {headers: {
+  //     headers: { Authorization: 'Bearer 9MWooyeh7nsfjwAJMq4A' }
+  //   }})
+  //   .then(res => {
+  //     console.log(res);
+  //   })
+  //   .catch(err => {console.log(err);})
+  // }, [])
+
   return (
     <div className="App">
       <h1>Lord of the Rings</h1>
       <button onClick= {props.getCharacters}>Get Characters</button>
       {!props.error ? <div className= 'cardCont'>
-        {!props.isLoading ? <Characters /> : <p>{'Loading ...'}</p>}
+        {!props.isLoading ? <Characters /> : <p className= 'loader'>{'Loading ...'}</p>}
       </div> : <p className= 'error'>{props.error}</p>}
       
     </div>
@@ -50,6 +63,7 @@ function App(props) {
 
 const mapStateToProps= state =>{
   return {
+    characters: state.characters,
     isLoading: state.isLoading,
     error: state.error
   }

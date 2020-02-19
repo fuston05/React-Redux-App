@@ -8,14 +8,14 @@ export const SET_ERROR = 'SET_ERROR';
 export const getCharacters = () => dispatch => {
   dispatch({ type: GET_CHARACTERS });
   axios
-    .get('https://the-one-api.herokuapp.com/v/character',
+    .get('https://the-one-api.herokuapp.com/v1/character',
       {
         headers: { Authorization: 'Bearer 9MWooyeh7nsfjwAJMq4A' }
       })
     .then(res => {
       // console.log('res: ', res.data.docs); //characters array
       let data = [];
-      for (let i = 0; i < 10; i++) {
+      for (let i = 0; i < 50; i++) {
         data.push(res.data.docs[i]);
         console.log('data: ', data);
       }

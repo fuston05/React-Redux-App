@@ -1,12 +1,40 @@
 .App {
   text-align: center;
-}
 
-.cardCont{
-  padding: 2%;
-}
+  .error{
+    color: red;
+  }
+  
+  h1{
+    font-size: 2rem;
+    padding: 2% 0;
+  }
 
-.error{
-  color: red;
-}
+  button{
+    font-size: 1.2rem;
+    border-radius: 8px;
+    background-color: blue;
+    color: #ccc;
+    padding: 1%;
+
+    &:hover{
+      opacity: 0.8;
+      cursor: pointer;
+    }
+  }
+
+  .cardCont{
+    padding: 2%;
+
+    .loader{
+      font-size: 1.2rem;
+      color: green;
+    }
+  }
+
+}//end App
+
+
+
+
 

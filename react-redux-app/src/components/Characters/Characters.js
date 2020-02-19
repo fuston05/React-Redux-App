@@ -5,7 +5,6 @@ import { connect } from 'react-redux';
 
 //styles
 import './CharactersStyles.scss'
-import CharacterCard from '../CharacterCard/CharacterCard';
 
 const Characters = (props) => {
   return (
@@ -13,19 +12,21 @@ const Characters = (props) => {
       {props.characters.map(character => {
         console.log('character-from characters: ',character);
         return (
-          <CharacterCard 
-            key= {character.id}
-            character= { {
-              name: character.name,
-              race: character.race,
-              gender: character.gender,
-              wiki: character.wikiUrl
-            } }
-          />
-        )
+          <div className= 'card'>
+          <h1>{character.name}</h1>
+          <p>Race: {character.race}</p>
+          <p>Gender: {character.gender}</p>
+          <a
+            rel= 'noopener noreferrer'
+            target= '_blank' 
+            href= {character.wikiUrl}>
+            More Info
+          </a>
+        </div>
+        )//end map return
       })}
     </>
-  )
+  )//end main return
 }
 
 const mapStateToProps = state => {
