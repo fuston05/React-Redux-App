@@ -40,9 +40,9 @@ function App(props) {
     <div className="App">
       <h1>Lord of the Rings</h1>
       <button onClick= {props.getCharacters}>Get Characters</button>
-      <div className= 'cardCont'>
+      {!props.error ? <div className= 'cardCont'>
         {!props.isLoading ? <Characters /> : <p>{'Loading ...'}</p>}
-      </div>
+      </div> : <p className= 'error'>{props.error}</p>}
       
     </div>
   );

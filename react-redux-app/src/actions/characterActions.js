@@ -8,7 +8,7 @@ export const SET_ERROR = 'SET_ERROR';
 export const getCharacters = () => dispatch => {
   dispatch({ type: GET_CHARACTERS });
   axios
-    .get('https://the-one-api.herokuapp.com/v1/character',
+    .get('https://the-one-api.herokuapp.com/v/character',
       {
         headers: { Authorization: 'Bearer 9MWooyeh7nsfjwAJMq4A' }
       })
