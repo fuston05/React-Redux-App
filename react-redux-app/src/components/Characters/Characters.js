@@ -14,13 +14,13 @@ const Characters = (props) => {
         return (
           <div className= 'card'>
           <h1>{character.name}</h1>
-          <p>Race: {character.race}</p>
-          <p>Gender: {character.gender}</p>
+          <p><b>Race:</b> {character.race}</p>
+          <p><b>Gender:</b> {character.gender}</p>
           <a
             rel= 'noopener noreferrer'
             target= '_blank' 
             href= {character.wikiUrl}>
-            More Info
+            See Wiki
           </a>
         </div>
         )//end map return

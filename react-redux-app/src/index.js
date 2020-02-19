@@ -17,7 +17,7 @@ import thunk from 'redux-thunk';
 import {characterReducer} from './reducers/characterReducer';
 
 //styles
-import './index.css';
+import './index.scss';
 
 const store= createStore(
   characterReducer, 

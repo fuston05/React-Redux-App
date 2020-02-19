@@ -1,9 +1,16 @@
 
 .card{
   border: 1px soid #ddd;
+  border-radius: 8px;
   background-color: cornflowerblue;
-  margin: 2% 0;
+  margin: 2%;
   padding: 1%;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 
   a{
     font-size: 1.4rem;
@@ -14,7 +21,9 @@
   }
 
   h1{
+    max-width: 100%;
     font-size: 1.4rem;
+    word-wrap: break-word;
   }
 
   p{
