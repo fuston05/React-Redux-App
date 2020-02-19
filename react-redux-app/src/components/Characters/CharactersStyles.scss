@@ -1,5 +1,4 @@
-
-.card{
+.card {
   border: 1px soid #ddd;
   border-radius: 8px;
   background-color: cornflowerblue;
@@ -12,21 +11,22 @@
   align-items: center;
   flex-wrap: wrap;
 
-  a{
+  a {
     font-size: 1.4rem;
-    &:hover{
+
+    &:hover {
       cursor: pointer;
       opacity: 0.8;
     }
   }
 
-  h1{
+  h1 {
     max-width: 100%;
     font-size: 1.4rem;
     word-wrap: break-word;
   }
 
-  p{
+  p {
     font-size: 1.4rem;
   }
 }

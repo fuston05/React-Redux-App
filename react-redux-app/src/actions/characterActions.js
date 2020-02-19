@@ -13,17 +13,13 @@ export const getCharacters = () => dispatch => {
         headers: { Authorization: 'Bearer 9MWooyeh7nsfjwAJMq4A' }
       })
     .then(res => {
-      // console.log('res: ', res.data.docs); //characters array
       let data = [];
       for (let i = 0; i < 50; i++) {
         data.push(res.data.docs[i]);
-        console.log('data: ', data);
       }
       dispatch({ type: UPDATE_CHARACTERS, payload: data });
     })
     .catch(err => {
-      console.log(err.response);
       dispatch({ type: SET_ERROR, payload: 'Error getting your characters, please try again...' })
-    })
-
+    })``
 }//end getCharacters

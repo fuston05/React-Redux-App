@@ -20,7 +20,6 @@ export const characterReducer= (state= initialState, action) => {
       }
 
       case UPDATE_CHARACTERS: 
-      console.log('characters from state: ', state.characters);
         return {
           ...state,
           isLoading: false,

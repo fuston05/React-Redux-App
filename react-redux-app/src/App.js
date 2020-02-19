@@ -1,5 +1,4 @@
-import React, {useEffect} from 'react';
-import axios from 'axios';
+import React from 'react';
 
 //redux
 import {connect} from 'react-redux';
@@ -36,18 +35,6 @@ import './App.scss';
 
 
 function App(props) {
-
-  // useEffect(() => {
-  //   axios
-  //   .get(`https://the-one-api.herokuapp.com/v1/character/[5cd99d4bde30eff6ebccfdf3]`, 
-  //   {headers: {
-  //     headers: { Authorization: 'Bearer 9MWooyeh7nsfjwAJMq4A' }
-  //   }})
-  //   .then(res => {
-  //     console.log(res);
-  //   })
-  //   .catch(err => {console.log(err);})
-  // }, [])
 
   return (
     <div className="App">

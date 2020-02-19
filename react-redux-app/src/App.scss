@@ -1,17 +1,17 @@
 .App {
   text-align: center;
 
-  .error{
+  .error {
     color: red;
   }
-  
-  h1{
+
+  h1 {
     font-size: 2rem;
     padding: 2% 0;
     color: orange;
   }
 
-  button{
+  button {
     font-size: 1.2rem;
     border-radius: 8px;
     background-color: darkolivegreen;
@@ -19,28 +19,22 @@
     padding: 1%;
     margin: 0 0 1% 0;
 
-    &:hover{
+    &:hover {
       opacity: 0.8;
       cursor: pointer;
     }
   }
 
-  .cardCont{
+  .cardCont {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 
-    .loader{
+    .loader {
       font-size: 1.2rem;
       color: green;
     }
   }
-
 }//end App
-
-
-
-
-

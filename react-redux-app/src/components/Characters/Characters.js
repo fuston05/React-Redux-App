@@ -10,7 +10,6 @@ const Characters = (props) => {
   return (
     <>
       {props.characters.map(character => {
-        console.log('character-from characters: ',character);
         return (
           <div className= 'card'>
           <h1>{character.name}</h1>
